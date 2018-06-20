@@ -1,9 +1,9 @@
-angular.module('main').controller('usuarioController',function ($scope, $http, $location, $rootScope){
+angular.module('main').controller('usuarioController',function ($scope, $http, $location, $rootScope,usuarioService){
 
 	$scope.persons = {};
 	$scope.person = {};
 	$scope.mensagem = {};
-
+	
 	$http.get('/person/all')
 	.success(function(persons){
 		$scope.persons = persons;
@@ -19,16 +19,13 @@ angular.module('main').controller('usuarioController',function ($scope, $http, $
 	$scope.home = function(){
 		$location.path("/home");
 	}
+	$scope.save = function(){
+		usuarioService.save($scope.person);
+	}
 	
 	$scope.delete = function(id){
-		$http.delete('/person/delete/'+ id)
-		.success(function(data){
-			$scope.removeUsuario(id);
-		})
-		.catch(function(error){
-			console.log(error);
-			$scope.mensagem.erro = "Erro ao remover objeto";
-		});
+		usuarioService.delete(id);
+		$scope.removeUsuario(id);
 	}
 	
 	$scope.removeUsuario = function (id){

@@ -1,21 +1,20 @@
-angular.module('main', ['ngRoute','ngResource'])
+angular.module('main', ['ngRoute','ngResource','usuarioService'])
 .config(function($routeProvider,$locationProvider) {
 	
 	 $routeProvider.when('/home', {
-         templateUrl: 'public/partials/home.html',
+         templateUrl: 'public/partials/harpio-home.html',
          controller: 'homeController'
      });
 	 
-	 $routeProvider.when('/usuarios', {
-         templateUrl: 'public/partials/database.html',
+	 $routeProvider.when('/usuario', {
+         templateUrl: 'public/partials/harpio-usuario.html',
          controller: 'usuarioController'
      });
 	 
 	 $routeProvider.when('/usuario/novo', {
-         templateUrl: 'public/partials/usuario-novo.html',
-         controller: 'userController'
+         templateUrl: 'public/partials/harpio-usuario-novo.html',
+         controller: 'usuarioController'
      });
 	 
-	 
-	 //$routeProvider.otherwise({redirectTo:'/home'});
+	 $routeProvider.otherwise({redirectTo:'/home'});
 })

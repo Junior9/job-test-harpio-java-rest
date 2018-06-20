@@ -15,7 +15,7 @@ angular.module('main').controller('homeController',function ($scope, $http, $loc
 	}
 	
 	$scope.getData = function() {
-		$location.path("/usuarios");
+		$location.path("/usuario");
 	}
 	
 	$scope.save = function(person){
