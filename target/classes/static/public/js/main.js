@@ -6,7 +6,16 @@ angular.module('main', ['ngRoute','ngResource'])
          controller: 'homeController'
      });
 	 
-
+	 $routeProvider.when('/usuarios', {
+         templateUrl: 'public/partials/database.html',
+         controller: 'usuarioController'
+     });
+	 
+	 $routeProvider.when('/usuario/novo', {
+         templateUrl: 'public/partials/usuario-novo.html',
+         controller: 'userController'
+     });
+	 
 	 
 	 //$routeProvider.otherwise({redirectTo:'/home'});
 })

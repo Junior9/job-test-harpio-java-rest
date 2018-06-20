@@ -18,7 +18,7 @@ public class Person {
 	private String name;
 	private String email;
 	private String phone;
-	private String webSite;
+	private String website;
 	private String userName;
 
 	@ManyToOne(cascade = {CascadeType.REMOVE})
@@ -39,7 +39,7 @@ public class Person {
 		return phone;
 	}
 	public String getWebSite() {
-		return webSite;
+		return website;
 	}
 	public String getUserName() {
 		return userName;

@@ -14,33 +14,30 @@
 </nav>
 
 <div class="container">
+	
+	<ol class="breadcrumb">
+	  <li><a ng-click="home()">Home</a></li>
+	  <li><a ng-click="novo()">Novo </a></li>
+	</ol>
+
 
 	<div class="row">
-		<a ng-click="api()" class="btn btn-primary ">Carregar api </a>
-		<a ng-click="getData()" class="btn btn-primary ">Carregar banco </a>
-	</div>
-
-	<div class="row">
-
-		<h3>Usuarios api</h3>
-
+		<h3>Usuarios em banco  </h3>
 		<table class="table  table-striped">
 			<tr>
 				<td class="">Name</td>
 				<td class="">Email</td>
 				<td class="">Phone</td>
-				<td class="">WebSite</td>
 				<td class="">Empresa</td>
-				<td class="">Salvar em banco</td>
+				<td class="">Deleta</td>
 			</tr>
 		
 			<tr ng-repeat="person in persons | filter : filterName">
 				<td>{{person.name}}</td>
 				<td>{{person.email}}</td>
 				<td>{{person.phone}}</td>
-				<td>{{person.website}}</td>
 				<td>{{person.company.name}}</td>
-				<td><a ng-click="save(person)"> + </a></td>
+				<td><a ng-click="delete(person.id)"> X </a></td>
 			</tr>
 		</table>
 	</div>

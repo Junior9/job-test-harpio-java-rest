@@ -22,6 +22,8 @@
 
 	<div class="row">
 
+		<h3>Usuarios api</h3>
+
 		<table class="table  table-striped">
 			<tr>
 				<td class="">Name</td>
@@ -30,22 +32,15 @@
 				<td class="">WebSite</td>
 				<td class="">Empresa</td>
 				<td class="">Salvar em banco</td>
-				
-				<div ng-if="isDelete == 1">	
-					<td class="">Deleta</td>
-				</div>
-			
 			</tr>
 		
 			<tr ng-repeat="person in persons | filter : filterName">
-				<td><a ng-click="update(user.id)"> {{person.name}} </a></td>
+				<td>{{person.name}}</td>
 				<td>{{person.email}}</td>
 				<td>{{person.phone}}</td>
 				<td>{{person.website}}</td>
 				<td>{{person.company.name}}</td>
 				<td><a ng-click="save(person)"> + </a></td>
-				
-				<td><a ng-click="delete(person.id)"> X </a></td>
 			</tr>
 		</table>
 	</div>

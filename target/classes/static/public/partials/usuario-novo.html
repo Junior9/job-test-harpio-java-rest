@@ -1,0 +1,47 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+	</div>
+</nav>
+
+<div class="row container">		
+	<div class="col-md-4"></div>
+	<div class="col-md-4">
+		<section>
+			<form method="post" ng-submit="save()" role="new user">	
+			
+				<div class="form-group">
+					<label for="name">Nome</label> 
+					<input ng-model="person.name" type="text" class="form-control" id="name" name="userLogin" placeholder="Nome">
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Email</label> 
+					<input ng-model="person.email" type="email" class="form-control" id="email" name="email" placeholder="Email">
+				</div>		
+					
+				<div class="form-group">
+					<label for="phone">Phone</label> 
+					<input ng-model="person.phone" type="tel" class="form-control" id="phone" name="phone" placeholder="Telefone">
+				</div>					
+				
+				<div class="form-group">
+					<label for="company">Empresa</label> 
+					<input ng-model="person.company.name" type="text" class="form-control" id="company" name="company" placeholder="Empresa">
+				</div>			
+			
+				<button type="submit" class="btn btn-lg btn-primary btn-block">Save</button>
+			</form>
+		</section>
+	</div>
+	<div class="col-md-4"></div>
+</div>	
