@@ -14,7 +14,6 @@ Back-End Rest Json
 ---------------------
 	/person/all
 	/person/save
-	/person/update/
 	/person/delete/{id}
 
 DataBase MySql

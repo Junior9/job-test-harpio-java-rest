@@ -26,6 +26,10 @@ public class Person {
 
 	Person(){}
 	
+	public Person(String name) {
+		this.name = name;
+	}
+
 	public int getId() {
 		return id;
 	}

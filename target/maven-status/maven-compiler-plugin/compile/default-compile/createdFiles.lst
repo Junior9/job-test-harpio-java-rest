@@ -1,0 +1,8 @@
+com\harpio\controller\HomeController.class
+com\harpio\service\PersonService.class
+com\harpio\controller\PersonController.class
+com\harpio\respository\PersonRespository.class
+com\harpio\model\Person.class
+com\harpio\Configuration.class
+com\harpio\respository\CompanyRepository.class
+com\harpio\model\Company.class
